@@ -1,0 +1,16 @@
+---
+
+- name: Create filesystems
+  filesystem:
+    fstype: "{{ item.filesystem }}"
+    dev: "{{ item.device_path }}"
+  with_items: volumes_mounts
+
+- name: Mount volumes
+  mount:
+    name: "{{ item.file_path }}"
+    src: "{{ item.device_path }}"
+    fstype: "{{ item.filesystem }}"
+    opts: "{{ item.mount_opts }}"
+    state: "{{ item.mount_state }}"
+  with_items: volumes_mounts

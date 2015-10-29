@@ -1,0 +1,16 @@
+---
+
+volumes_mounts: []
+
+# Example usage:
+# volumes_mounts:
+#   - device_path: "/dev/xvdb"
+#     file_path: "/ssd"
+#     filesystem: "ext4"
+#     mount_opts: "noatime,nodiratime"
+#     mount_state: "mounted"
+#   - device_path: "/dev/xvdf"
+#     file_path: "/data"
+#     filesystem: "ext4"
+#     mount_opts: "noatime,nodiratime"
+#     mount_state: "mounted"

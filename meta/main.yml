@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: ReactiveOps
+  description: Manage system device mounts
+  company: ReactiveOps
+  license: license (GPLv2, CC-BY, etc)
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+dependencies: []
