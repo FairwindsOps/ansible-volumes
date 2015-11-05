@@ -1,5 +1,11 @@
 ---
 
+- name: Install XFS packages
+  apt:
+    name: xfsprogs
+    state: present
+  when: volumes_mounts_xfs
+
 - name: Create filesystems
   filesystem:
     fstype: "{{ item.filesystem }}"
