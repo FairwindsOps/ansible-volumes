@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  remote_user: root
+  vars:
+    volumes_mounts:
+      - device_path: "/tmp/somefile"
+        file_path: "/tmp/somemount"
+        filesystem: "ext4"
+        mount_opts: "noatime,nodiratime"
+        mount_state: "mounted"
+  roles:
+    - role_under_test
