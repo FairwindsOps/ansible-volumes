@@ -10,7 +10,7 @@
   filesystem:
     fstype: "{{ item.filesystem }}"
     dev: "{{ item.device_path }}"
-  with_items: volumes_mounts
+  with_items: "{{ volumes_mounts }}"
 
 - name: Mount volumes
   mount:
@@ -19,4 +19,4 @@
     fstype: "{{ item.filesystem }}"
     opts: "{{ item.mount_opts }}"
     state: "{{ item.mount_state }}"
-  with_items: volumes_mounts
+  with_items: "{{ volumes_mounts }}"
