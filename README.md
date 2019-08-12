@@ -34,5 +34,5 @@ Use this role by populating `volume_mounts` and including the role:
 ```
     - hosts: servers
       roles:
-         - { role: reactiveops.volumes }
+         - { role: fairwinds.volumes }
 ```
